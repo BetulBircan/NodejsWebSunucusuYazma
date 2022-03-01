@@ -11,3 +11,8 @@ port numarası olarak 5000'i kullanalım.
 //node.js tarafında bir web sunucusu yazmak için node.js core modülü olan http modülünden faydalanacağız. 
 //http tanımlama
 const http = require('http')
+
+//sunucuyu oluşturmak için http.createServer() metodu kullanılır.request ve response parametreleri alır.
+const server = http.createServer((req,res) => {
+    
+})
