@@ -48,3 +48,8 @@ const server = http.createServer((req,res) => {
 
 //port oluşturma
 const port = 5000
+
+//Sunucu olarak  kendi bilgisayarımızı kullanacağız. Kendi bilgisayarımızdaki hangi portu kullanacağımızı listen metoduyla yazıyoruz.
+server.listen(port, () => {
+    console.log(`Sunucu ${port} Numaralı Portta Başlatıldı`)
+})
