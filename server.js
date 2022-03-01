@@ -18,4 +18,22 @@ const server = http.createServer((req,res) => {
     //request ten url bilgisini yakalama
     const url = req.url
 
+    //anasayfadaki /index sayfasına yönlendirme
+    if(url === "/index" || url === "/") {
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
+        res.write("<h2>İndex Sayfasına Hoşgeldiniz</h2>")
+    }
+    
+    //Hakkımızda sayfasına yönlendirme
+    else if(url === "/hakkimizda") {
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
+        res.write("<h2>Hakkımızda Sayfasına Hoşgeldiniz</h2>")
+    }
+    
+    //İletişim Sayfasına Yönlendirmw
+    else if(url === "/iletisim") {
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
+        res.write("<h2>İletişim Sayfasına Hoşgeldiniz</h2>")
+    }
+
 })
