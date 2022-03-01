@@ -14,5 +14,8 @@ const http = require('http')
 
 //sunucuyu oluşturmak için http.createServer() metodu kullanılır.request ve response parametreleri alır.
 const server = http.createServer((req,res) => {
-    
+
+    //request ten url bilgisini yakalama
+    const url = req.url
+
 })
