@@ -45,3 +45,6 @@ const server = http.createServer((req,res) => {
     //response un tamamlandığını gösterir.
     res.end()
 })
+
+//port oluşturma
+const port = 5000
