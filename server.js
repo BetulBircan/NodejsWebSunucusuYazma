@@ -20,26 +20,28 @@ const server = http.createServer((req,res) => {
 
     //anasayfadaki /index sayfasına yönlendirme
     if(url === "/index" || url === "/") {
-        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
-        res.write("<h2>İndex Sayfasına Hoşgeldiniz</h2>")
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' }) //header bilgisini gönderir.
+        res.write("<h2>İndex Sayfasına Hoşgeldiniz</h2>") //Sunucudaki isteğe bir cevap yollar.
     }
     
     //Hakkımızda sayfasına yönlendirme
     else if(url === "/hakkimizda") {
-        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
-        res.write("<h2>Hakkımızda Sayfasına Hoşgeldiniz</h2>")
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' }) //header bilgisini gönderir.
+        res.write("<h2>Hakkımızda Sayfasına Hoşgeldiniz</h2>") //Sunucudaki isteğe bir cevap yollar.
     }
     
     //İletişim Sayfasına Yönlendirme
     else if(url === "/iletisim") {
-        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
-        res.write("<h2>İletişim Sayfasına Hoşgeldiniz</h2>")
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' }) //header bilgisini gönderir.
+        res.write("<h2>İletişim Sayfasına Hoşgeldiniz</h2>") //Sunucudaki isteğe bir cevap yollar.
     }
 
     //bunlardan hiçbiri değilse örneğin /test,sayfa bulunamadı olarak yönlendirme
     else {
-        res.writeHead(404, {"Content-Type":"text/html"}) 
-        res.write("<h2>404 NOT FOUND</h2>")
+        res.writeHead(404, {"Content-Type":"text/html"})  //header bilgisini gönderir.
+        res.write("<h2>404 NOT FOUND</h2>") //Sunucudaki isteğe bir cevap yollar.
     }
 
+    //response un tamamlandığını gösterir.
+    res.end()
 })
