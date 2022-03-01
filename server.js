@@ -30,10 +30,16 @@ const server = http.createServer((req,res) => {
         res.write("<h2>Hakkımızda Sayfasına Hoşgeldiniz</h2>")
     }
     
-    //İletişim Sayfasına Yönlendirmw
+    //İletişim Sayfasına Yönlendirme
     else if(url === "/iletisim") {
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' })
         res.write("<h2>İletişim Sayfasına Hoşgeldiniz</h2>")
+    }
+
+    //bunlardan hiçbiri değilse örneğin /test,sayfa bulunamadı olarak yönlendirme
+    else {
+        res.writeHead(404, {"Content-Type":"text/html"}) 
+        res.write("<h2>404 NOT FOUND</h2>")
     }
 
 })
